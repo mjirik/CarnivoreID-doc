@@ -47,6 +47,8 @@ contain the date of camera trap check and the name of the locality.
 
 When the upload is finished, the taxon classification is started automatically.
 
+![upload finished](media/upload_finished.png)
+
 ## Upload using Synology Drive client
 
 There is the possibility to upload multiple ZIP archives at once using the Synology Drive client. [Let us know](contact.md) if you are interested in this feature.
@@ -59,7 +61,44 @@ The file format require to combine the date of camera trap check and the name of
 
 In the figure above, the user can see the files that are in the folder. The first one will be processed 
 without any problems, the second one contains unknown locality (which will be automatically added to the database during upload),
-and the third one will be skipped because the file name is not in correct format.
+and the third one will be skipped because the file name is not in correct format. 
+User can change the file name in the shared directory and reload the page to see the changes.
+
+There are three options to attach the locality and the date information to the zip file. 
+* The file name contains the date and the locality name. The date is in the format YYYY-MM-DD.
+* The synchronized directory contains a dir with the locality name. The files in this directory are named according to the date format YYYY-MM-DD.
+* The synchronized directory contains a dir with the date in the format YYYY-MM-DD. The files in this directory are named according to the locality name.
+
+```aiignore
+shared_dir/
+├── 2023-10-01/
+│   ├── Locality1/
+│   ├── Locality2/
+│   └── Locality3/
+├── 2023-10-02/
+│   ├── locality1/
+│   └── locality3/
+└── Locality2/
+    ├── 2023-07-01/
+    └──  2022-10-01/
+```
+
+When the files are in the correct format, the user can click on the "Import all" button. The taxon classification will be started automatically.
+
+The other buttons can be used for the identification workflow. In the case the all files contains the same taxon, the user can click on the "Import as single taxon".
+If there exists a database of the identities, it can be imported using the "Import all as known identity" button.
+
+
+# Camera trap checks
+
+Each uploaded archive is considered as a camera trap check. The user can see the list of all camera trap checks in the application.
+The 
+
+![camera trap checks](media/uploads_taxa.png)
+
+
+k
+
 
 
 
