@@ -92,12 +92,19 @@ If there exists a database of the identities, it can be imported using the "Impo
 # Camera trap checks
 
 Each uploaded archive is considered as a camera trap check. The user can see the list of all camera trap checks in the application.
-The 
+
 
 ![camera trap checks](media/uploads_taxa.png)
 
 
-k
+
+# Set missing taxa
+
+The taxa classification is started automatically after the upload is finished. Usually, the classification is missing in
+some media files. The user can set the missing taxa. It can be runned from the Taxon classification view or from the Camera trap check view.
+
+![set missing taxa](media/add_missing_taxa.png)
+
 
 
 
