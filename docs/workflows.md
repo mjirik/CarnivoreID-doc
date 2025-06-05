@@ -89,7 +89,7 @@ The other buttons can be used for the identification workflow. In the case the a
 If there exists a database of the identities, it can be imported using the "Import all as known identity" button.
 
 
-# Camera trap checks
+## Camera trap checks
 
 Each uploaded archive is considered as a camera trap check. The user can see the list of all camera trap checks in the application.
 
@@ -98,12 +98,17 @@ Each uploaded archive is considered as a camera trap check. The user can see the
 
 
 
-# Set missing taxa
+## Set missing taxa
 
 The taxa classification is started automatically after the upload is finished. Usually, the classification is missing in
-some media files. The user can set the missing taxa. It can be runned from the Taxon classification view or from the Camera trap check view.
+some media files. The user can set the missing taxa. It can be started from the Taxon classification view or from the Camera trap check view.
 
-![set missing taxa](media/add_missing_taxa.png)
+![set missing taxa](media/add_missing_taxon.png)
+
+The media files with missing taxa are displayed. The user can select the taxa from the list or use the preselection based on the most probable taxa.
+
+
+## Taxon verification
 
 
 

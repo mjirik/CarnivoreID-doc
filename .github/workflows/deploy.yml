@@ -1,0 +1,10 @@
+name: Deploy MkDocs site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # nebo jiná větev
+
+permissions:
+  contents: read
+  pages: write

@@ -11,3 +11,16 @@ More information about project can be found on the [web presentation of the proj
 The user do
 [workflows](workflows.md)
 
+
+# Build the documentation
+
+```bash
+pdm install
+pdm run mkdocs build
+```
+
+## Run the documentation server
+
+```bash
+pdm run mkdocs serve
+```

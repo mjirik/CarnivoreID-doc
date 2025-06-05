@@ -1,0 +1,14 @@
+[project]
+name = "moje-dokumentace"
+version = "0.1.0"
+description = "Dokumentace pomocí MkDocs a Material"
+authors = ["Miroslav Jiřík <mjirik@ntis.zcu.cz>"]
+dependencies = [
+    "mkdocs",
+    "mkdocs-material"
+]
+requires-python = ">=3.8"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
