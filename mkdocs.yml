@@ -1,0 +1,10 @@
+site_name: Carnivore-ID App
+theme:
+  name: material
+
+nav:
+  - Úvod: index.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
