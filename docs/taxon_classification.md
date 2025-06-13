@@ -1,28 +1,3 @@
-# User documentation 
-
-
-
-The application is created to help categorize images according to the species and identify animals in camera trap images. 
-The two main usage scenarios are:
-* Taxon classification - the user can classify images according to the species
-* Individuality re-identification - the user can identify individuals in the images
-
-
-# First steps
-
-User can start using the application by logging in. The application is available at [https://caid.kky.zcu.cz/](https://caid.kky.zcy.cz/).
-User account can be created by the administrators, or the existing Google login via OAuth technology can be used for authentication.
-![login](media/login.png)
-
-
-After logging in, the dashboard is displayed. There you can see the base statistic information about
-uploaded media files.
-
-The taxon classification is available for all users. The individual identification is available for
-cooperating groups and users. If you are interested in the individuality identification, [contact us](contact.md).
-
-![dashboard](media/dashboard.png)
-
 # Taxon classification
 
 The taxon classification is available from the dashboard. The main view gives you the access to most important functions.
@@ -108,7 +83,8 @@ some media files. The user can set the missing taxa. It can be started from the 
 The media files with missing taxa are displayed. The user can select the taxa from the list or use the preselection based on the most probable taxa.
 
 
-## Taxon verification
+[//]: # (## Taxon verification)
+
 
 
 
