@@ -14,6 +14,7 @@ nav:
     - Getting Started: first_steps.md
     - Taxon classification: taxon_classification.md
     - Identification: identification.md
+    - Cloud import: cloud_import.md
   - Install: install.md
   - Build the docs: build_docs.md
   - Contact: contact.md
