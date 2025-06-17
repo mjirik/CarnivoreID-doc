@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../first_steps/">
+        <link rel="prev" href="../identification/">
       
       
-        <link rel="next" href="../identification/">
+        <link rel="next" href="../install/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Taxon classification - Carnivore-ID App</title>
+        <title>Cloud import - Carnivore-ID App</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#taxon-classification" class="md-skip">
+        <a href="#cloud-import" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Taxon classification
+              Cloud import
             
           </span>
         </div>
@@ -300,32 +300,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Taxon classification
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../taxon_classification/" class="md-nav__link">
         
   
   
@@ -336,62 +314,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data-upload" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data upload
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#upload-using-synology-drive-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upload using Synology Drive client
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#camera-trap-checks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Camera trap checks
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#set-missing-taxa" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set missing taxa
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -424,10 +346,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../cloud_import/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -438,6 +369,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -536,50 +468,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data-upload" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data upload
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#upload-using-synology-drive-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upload using Synology Drive client
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#camera-trap-checks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Camera trap checks
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#set-missing-taxa" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set missing taxa
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -597,58 +485,9 @@
   
 
 
-<h1 id="taxon-classification">Taxon classification<a class="headerlink" href="#taxon-classification" title="Permanent link">&para;</a></h1>
-<p>The taxon classification is available from the dashboard. The main view gives you the access to most important functions.</p>
-<p>Users typically collect data by retrieving image data from a camera trap after a certain period of time. 
-The first step is then to sort the images by animal species. 
-As input for automatic species recognition, we expect a ZIP archive containing data from a single camera trap. 
-The user only needs to confirm or provide the camera trap location. 
-The classification of animal species in the images is carried out automatically. 
-The output is a ZIP archive containing the input data organized into folders by species and a CSV file with metadata (such as date/time the image was taken, identified species, etc.).</p>
-<p><img alt="taxon classification" src="../media/taxon_classification.png" /></p>
-<h2 id="data-upload">Data upload<a class="headerlink" href="#data-upload" title="Permanent link">&para;</a></h2>
-<p>The user can upload a ZIP archive containing images from a camera trap. The recommended naming 
-contain the date of camera trap check and the name of the locality.</p>
-<p><img alt="upload species" src="../media/upload_species.png" /></p>
-<p>When the upload is finished, the taxon classification is started automatically.</p>
-<p><img alt="upload finished" src="../media/upload_finished.png" /></p>
-<h2 id="upload-using-synology-drive-client">Upload using Synology Drive client<a class="headerlink" href="#upload-using-synology-drive-client" title="Permanent link">&para;</a></h2>
-<p>There is the possibility to upload multiple ZIP archives at once using the Synology Drive client. <a href="../contact/">Let us know</a> if you are interested in this feature.</p>
-<p>When the setup is done in cooperation with the administrator, there is a synchronized folder in the user computer.
-All ZIP archives in this folder are automatically visible in the Cloud upload section of the application.
-The file format require to combine the date of camera trap check and the name of the locality in the file name.</p>
-<p><img alt="synology upload" src="../media/upload_cloud.png" /></p>
-<p>In the figure above, the user can see the files that are in the folder. The first one will be processed 
-without any problems, the second one contains unknown locality (which will be automatically added to the database during upload),
-and the third one will be skipped because the file name is not in correct format. 
-User can change the file name in the shared directory and reload the page to see the changes.</p>
-<p>There are three options to attach the locality and the date information to the zip file. 
-* The file name contains the date and the locality name. The date is in the format YYYY-MM-DD.
-* The synchronized directory contains a dir with the locality name. The files in this directory are named according to the date format YYYY-MM-DD.
-* The synchronized directory contains a dir with the date in the format YYYY-MM-DD. The files in this directory are named according to the locality name.</p>
-<pre><code class="language-aiignore">shared_dir/
-├── 2023-10-01/
-│   ├── Locality1/
-│   ├── Locality2/
-│   └── Locality3/
-├── 2023-10-02/
-│   ├── locality1/
-│   └── locality3/
-└── Locality2/
-    ├── 2023-07-01/
-    └──  2022-10-01/
-</code></pre>
-<p>When the files are in the correct format, the user can click on the "Import all" button. The taxon classification will be started automatically.</p>
-<p>The other buttons can be used for the identification workflow. In the case the all files contains the same taxon, the user can click on the "Import as single taxon".
-If there exists a database of the identities, it can be imported using the "Import all as known identity" button.</p>
-<h2 id="camera-trap-checks">Camera trap checks<a class="headerlink" href="#camera-trap-checks" title="Permanent link">&para;</a></h2>
-<p>Each uploaded archive is considered as a camera trap check. The user can see the list of all camera trap checks in the application.</p>
-<p><img alt="camera trap checks" src="../media/uploads_taxa.png" /></p>
-<h2 id="set-missing-taxa">Set missing taxa<a class="headerlink" href="#set-missing-taxa" title="Permanent link">&para;</a></h2>
-<p>The taxa classification is started automatically after the upload is finished. Usually, the classification is missing in
-some media files. The user can set the missing taxa. It can be started from the Taxon classification view or from the Camera trap check view.</p>
-<p><img alt="set missing taxa" src="../media/add_missing_taxon.png" /></p>
-<p>The media files with missing taxa are displayed. The user can select the taxa from the list or use the preselection based on the most probable taxa.</p>
+<h1 id="cloud-import">Cloud import<a class="headerlink" href="#cloud-import" title="Permanent link">&para;</a></h1>
+<p><img alt="dashboard" src="media/synology_import_files.png" /></p>
+<p><img alt="dashboard" src="media/synology_import_ui.png" /></p>
 
 
 
