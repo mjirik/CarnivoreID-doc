@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="..">
-      
-      
-        <link rel="next" href="../taxon_classification/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Getting Started - Carnivore-ID App</title>
+        <title>Upload data for identification - Carnivore-ID App</title>
       
     
     
@@ -61,6 +57,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#upload-data-for-identification" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -93,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started
+              Upload data for identification
             
           </span>
         </div>
@@ -232,20 +233,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -261,7 +260,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             User Guide
@@ -272,17 +271,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../first_steps/" class="md-nav__link">
         
   
   
@@ -293,7 +285,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -458,6 +449,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -476,21 +469,91 @@
   
 
 
-  <h1>Getting Started</h1>
-
-<p>User can start using the application by logging in. The application is available at <a href="https://caid.kky.zcy.cz/">https://caid.kky.zcu.cz/</a>.</p>
-<p>User account can be created by the administrators, or the existing Google login via OAuth technology can be used for authentication.
-<img alt="login" src="../media/login.png" /></p>
-<p>After logging in, the dashboard is displayed. There you can see the base statistic information about
-uploaded media files.</p>
-<p>The two main usage scenarios are:</p>
+<h1 id="upload-data-for-identification">Upload data for identification<a class="headerlink" href="#upload-data-for-identification" title="Permanent link">&para;</a></h1>
+<p>There are several ways how to upload media files and metadata to the identification process.</p>
 <ul>
-<li><a href="../taxon_classification/">Taxon classification</a> - the user can classify images according to the species</li>
-<li><a href="../identification/">Individuality re-identification</a> - the user can identify individuals in the images</li>
+<li>
+<p>If you have no existing organized database, you can upload a ZIP archive with images and videos into
+the application and the representatives of the individuals will be then selected manually in the web interface.
+  <img alt="upload_unknown" src="../media/upload_unknown.png" /></p>
+</li>
+<li>
+<p>If you have existing organized database in directories with the name of the identity,
+  you can upload a ZIP archive with this structure into the application.
+  The uploaded archive must contain directories with the name of the identity. The images and videos of the 
+  individuals must be inside these directories.
+   <code>aiignore
+   upload.zip
+   ├── Bastien/
+   │   ├── image1.jpg
+   │   ├── image2.jpg
+   │   └── video1.mp4
+   ├── Luna/
+   │   ├── image1.png
+   │   └── image2.jpg
+   └── Max/
+       ├── video1.webp
+       └── video2.mp4</code></p>
+</li>
+<li>
+<p>If your metadata are more complex, you can prepare a CSV or XLSX file with the metadata and a ZIP archive with images and videos.
+  The <code>original_path</code> is required in the uploaded spreadsheet. The <code>predicted_category</code>, <code>unique_name</code>, <code>locality name</code>, <code>latitude</code>, <code>longitude</code>, <code>datetime</code> are optional.
+   <code>aiignore
+   upload.zip
+   ├── imgs/
+   │   ├── im1.jpg
+   │   └── im2.jpg
+   ├── video1.mp4
+   └── metadata.csv</code></p>
+</li>
 </ul>
-<p>The taxon classification is available for all users. The individual identification is available for
-cooperating groups and users. If you are interested in the individuality identification, <a href="../contact/">contact us</a>.</p>
-<p><img alt="dashboard" src="../media/dashboard.png" /></p>
+<table>
+<thead>
+<tr>
+<th><code>original_path</code></th>
+<th><code>predicted_category</code></th>
+<th><code>unique_name</code></th>
+<th><code>locality name</code></th>
+<th><code>latitude</code></th>
+<th><code>longitude</code></th>
+<th><code>datetime</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>imgs/im1.jpg</td>
+<td>Lynx lynx</td>
+<td>Bastien</td>
+<td>Pod dubem</td>
+<td>49.28021</td>
+<td>13.1819</td>
+<td>2023-10-01 14:30:00</td>
+</tr>
+<tr>
+<td>imgs/im2.jpg</td>
+<td>Lynx lynx</td>
+<td>Luna</td>
+<td>Za kopcem</td>
+<td>49.27921</td>
+<td>13.8219</td>
+<td>2023-10-01 15:00:00</td>
+</tr>
+<tr>
+<td>video1.mp4</td>
+<td>Lynx lynx</td>
+<td>Bastien</td>
+<td>Pod dubem</td>
+<td>49.28031</td>
+<td>13.1819</td>
+<td>2023-10-01 16:00:00</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>If your data are already in the CarnivoreID database, you can update metadata of ZIP file using the spreadsheet file in 
+  format mentioned above. The spreadsheet is uploaded from the menu shown blow.</li>
+</ul>
+<p><img alt="upload_update_metadata" src="../media/upload_update_metadata.png" /></p>
 
 
 
