@@ -452,6 +452,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#no-oranized-database-just-images-and-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      No oranized database, just images and videos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identities-organized-in-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identities organized in directories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-in-spreadsheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata in spreadsheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-metadata-of-media-files-in-carnivoreid-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update metadata of media files in CarnivoreID database
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -471,42 +515,39 @@
 
 <h1 id="upload-data-for-identification">Upload data for identification<a class="headerlink" href="#upload-data-for-identification" title="Permanent link">&para;</a></h1>
 <p>There are several ways how to upload media files and metadata to the identification process.</p>
-<ul>
-<li>
+<h2 id="no-oranized-database-just-images-and-videos">No oranized database, just images and videos<a class="headerlink" href="#no-oranized-database-just-images-and-videos" title="Permanent link">&para;</a></h2>
 <p>If you have no existing organized database, you can upload a ZIP archive with images and videos into
 the application and the representatives of the individuals will be then selected manually in the web interface.
   <img alt="upload_unknown" src="../media/upload_unknown.png" /></p>
-</li>
-<li>
+<h2 id="identities-organized-in-directories">Identities organized in directories<a class="headerlink" href="#identities-organized-in-directories" title="Permanent link">&para;</a></h2>
 <p>If you have existing organized database in directories with the name of the identity,
   you can upload a ZIP archive with this structure into the application.
   The uploaded archive must contain directories with the name of the identity. The images and videos of the 
-  individuals must be inside these directories.
-   <code>aiignore
-   upload.zip
-   ├── Bastien/
-   │   ├── image1.jpg
-   │   ├── image2.jpg
-   │   └── video1.mp4
-   ├── Luna/
-   │   ├── image1.png
-   │   └── image2.jpg
-   └── Max/
-       ├── video1.webp
-       └── video2.mp4</code></p>
-</li>
-<li>
-<p>If your metadata are more complex, you can prepare a CSV or XLSX file with the metadata and a ZIP archive with images and videos.
-  The <code>original_path</code> is required in the uploaded spreadsheet. The <code>predicted_category</code>, <code>unique_name</code>, <code>locality name</code>, <code>latitude</code>, <code>longitude</code>, <code>datetime</code> are optional.
-   <code>aiignore
-   upload.zip
-   ├── imgs/
-   │   ├── im1.jpg
-   │   └── im2.jpg
-   ├── video1.mp4
-   └── metadata.csv</code></p>
-</li>
+  individuals must be inside these directories.</p>
+<pre><code class="language-aiignore">upload.zip
+├── Bastien/
+│   ├── image1.jpg
+│   ├── image2.jpg
+│   └── video1.mp4
+├── Luna/
+│   ├── image1.png
+│   └── image2.jpg
+└── Max/
+   ├── video1.webp
+   └── video2.mp4
+</code></pre>
+<h2 id="metadata-in-spreadsheet">Metadata in spreadsheet<a class="headerlink" href="#metadata-in-spreadsheet" title="Permanent link">&para;</a></h2>
+<ul>
+<li>If your metadata are more complex, you can prepare a CSV or XLSX file with the metadata and a ZIP archive with images and videos.
+  The <code>original_path</code> is required in the uploaded spreadsheet. The <code>predicted_category</code>, <code>unique_name</code>, <code>locality name</code>, <code>latitude</code>, <code>longitude</code>, <code>datetime</code> are optional.</li>
 </ul>
+<pre><code class="language-aiignore">upload.zip
+ ├── imgs/
+ │   ├── im1.jpg
+ │   └── im2.jpg
+ ├── video1.mp4
+ └── metadata.csv
+</code></pre>
 <table>
 <thead>
 <tr>
@@ -549,10 +590,9 @@ the application and the representatives of the individuals will be then selected
 </tr>
 </tbody>
 </table>
-<ul>
-<li>If your data are already in the CarnivoreID database, you can update metadata of ZIP file using the spreadsheet file in 
-  format mentioned above. The spreadsheet is uploaded from the menu shown blow.</li>
-</ul>
+<h2 id="update-metadata-of-media-files-in-carnivoreid-database">Update metadata of media files in CarnivoreID database<a class="headerlink" href="#update-metadata-of-media-files-in-carnivoreid-database" title="Permanent link">&para;</a></h2>
+<p>If your data are already in the CarnivoreID database, you can update metadata of ZIP file using the spreadsheet file in 
+  format mentioned above. The spreadsheet is uploaded from the menu shown blow.</p>
 <p><img alt="upload_update_metadata" src="../media/upload_update_metadata.png" /></p>
 
 
