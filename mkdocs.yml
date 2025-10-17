@@ -3,6 +3,7 @@ theme:
   name: material
 #  features:
 #    - navigation.tabs
+  logo: docs/media/project_top_image.png
   icon:
     repo: material/github
 repo_url: https://github.com/mjirik/CarnivoreID-doc
